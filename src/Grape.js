@@ -9,13 +9,19 @@ const GrapeJS = () => {
   useEffect(() => {
     const editor = grapesjs.init({
       container: editorRef.current,
-      components: '<div class="custom-button" data-gjs-type="custom-button">ClickMe</div>',
+      components: `
+        <div class="custom-button" data-gjs-type="custom-button">ClickMe</div>`,
       plugins: [GrapeJSCustomButton]
       // Grape.js configuration options
     });
+
+    editor.BlockManager.add('link', {
+      label: 'link',
+      content: '<div class="custom-button" data-gjs-type="link">ClickMe</div>'
+    });
     
     editor.Panels.addPanel({
-      id: 'badic-actions',
+      id: 'basic-actions',
       buttons: [
         {
           id: 'save',

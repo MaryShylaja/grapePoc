@@ -16,9 +16,35 @@ const GrapeJS = () => {
     });
 
     editor.BlockManager.add('link', {
-      label: 'link',
+      label: 'Link',
       content: '<div class="custom-button" data-gjs-type="link">ClickMe</div>'
     });
+
+    editor.BlockManager.add('text', {
+      label: 'Text',
+      content: '<div class="custom-button" data-gjs-type="text">ClickMe</div>'
+    });
+
+    editor.BlockManager.add('label', {
+      label: 'Label',
+      content: '<div class="custom-button" data-gjs-type="label">ClickMe</div>'
+    });
+
+    editor.BlockManager.add('image', {
+      label: 'Image',
+      content: '<div class="custom-button" data-gjs-type="image">Image</div>'
+    });
+
+    editor.BlockManager.add('video', {
+      label: 'Video',
+      content: '<div class="custom-button" data-gjs-type="video">ClickMe</div>'
+    });
+
+    editor.BlockManager.add('svg', {
+      label: 'SVG',
+      content: '<div class="custom-button" data-gjs-type="svg">ClickMe</div>'
+    });
+
     
     editor.Panels.addPanel({
       id: 'basic-actions',
